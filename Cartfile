@@ -1,0 +1,2 @@
+github "ss-abramchuk/openvpn-adapter" "develop"
+github "kishikawakatsumi/KeychainAccess" ~> 3.0

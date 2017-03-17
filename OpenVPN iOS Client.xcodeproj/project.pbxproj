@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C91031061E47237A0004DFFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91031051E47237A0004DFFE /* AppDelegate.swift */; };
+		C910310B1E47237A0004DFFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91031091E47237A0004DFFE /* Main.storyboard */; };
+		C910310D1E47237A0004DFFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C910310C1E47237A0004DFFE /* Assets.xcassets */; };
+		C91031101E47237A0004DFFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C910310E1E47237A0004DFFE /* LaunchScreen.storyboard */; };
+		C91031271E4727E20004DFFE /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91031261E4727E20004DFFE /* PacketTunnelProvider.swift */; };
+		C910312B1E4727E20004DFFE /* OpenVPN iOS Tunnel Provider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C91031221E4727E20004DFFE /* OpenVPN iOS Tunnel Provider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C91031381E472C870004DFFE /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91031371E472C870004DFFE /* KeychainAccess.framework */; };
+		C91031391E472C9C0004DFFE /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91031371E472C870004DFFE /* KeychainAccess.framework */; };
+		C912BB231E7C329B002B9414 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C912BB221E7C329B002B9414 /* NetworkExtension.framework */; };
+		C912BB271E7C391F002B9414 /* OpenVPNAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C912BB261E7C391F002B9414 /* OpenVPNAdapter.framework */; };
+		C92638FC1E71B4B500B3D77A /* NEPacketTunnelFlow+OpenVPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92638FB1E71B4B500B3D77A /* NEPacketTunnelFlow+OpenVPN.swift */; };
+		C92638FF1E71BF9C00B3D77A /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92638FE1E71BF9C00B3D77A /* Then.swift */; };
+		C928AD731E6E952F00DA04BD /* KeychainAccess+Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = C928AD721E6E952F00DA04BD /* KeychainAccess+Reference.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C91031291E4727E20004DFFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C91030F81E471D760004DFFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C91031211E4727E20004DFFE;
+			remoteInfo = "OpenVPN Tunnel Provider";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C910312F1E4727E20004DFFE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C910312B1E4727E20004DFFE /* OpenVPN iOS Tunnel Provider.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C91031021E47237A0004DFFE /* OpenVPN iOS Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenVPN iOS Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91031051E47237A0004DFFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C910310A1E47237A0004DFFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C910310C1E47237A0004DFFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C910310F1E47237A0004DFFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C91031111E47237A0004DFFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C91031221E4727E20004DFFE /* OpenVPN iOS Tunnel Provider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OpenVPN iOS Tunnel Provider.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91031251E4727E20004DFFE /* OpenVPN iOS Tunnel Provider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OpenVPN iOS Tunnel Provider.entitlements"; sourceTree = "<group>"; };
+		C91031261E4727E20004DFFE /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		C91031281E4727E20004DFFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C91031371E472C870004DFFE /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		C912BB221E7C329B002B9414 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/System/Library/Frameworks/NetworkExtension.framework; sourceTree = DEVELOPER_DIR; };
+		C912BB261E7C391F002B9414 /* OpenVPNAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenVPNAdapter.framework; path = Carthage/Build/iOS/OpenVPNAdapter.framework; sourceTree = "<group>"; };
+		C92638FB1E71B4B500B3D77A /* NEPacketTunnelFlow+OpenVPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NEPacketTunnelFlow+OpenVPN.swift"; sourceTree = "<group>"; };
+		C92638FE1E71BF9C00B3D77A /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		C928AD721E6E952F00DA04BD /* KeychainAccess+Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeychainAccess+Reference.swift"; sourceTree = "<group>"; };
+		C9990B361E62F0E800474227 /* OpenVPN iOS Client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OpenVPN iOS Client.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C91030FF1E47237A0004DFFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C91031391E472C9C0004DFFE /* KeychainAccess.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C910311F1E4727E20004DFFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C912BB271E7C391F002B9414 /* OpenVPNAdapter.framework in Frameworks */,
+				C912BB231E7C329B002B9414 /* NetworkExtension.framework in Frameworks */,
+				C91031381E472C870004DFFE /* KeychainAccess.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C91030F71E471D760004DFFE = {
+			isa = PBXGroup;
+			children = (
+				C91031041E47237A0004DFFE /* OpenVPN iOS Client */,
+				C91031231E4727E20004DFFE /* OpenVPN iOS Tunnel Provider */,
+				C91031031E47237A0004DFFE /* Products */,
+				C91031361E472C870004DFFE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C91031031E47237A0004DFFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C91031021E47237A0004DFFE /* OpenVPN iOS Client.app */,
+				C91031221E4727E20004DFFE /* OpenVPN iOS Tunnel Provider.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C91031041E47237A0004DFFE /* OpenVPN iOS Client */ = {
+			isa = PBXGroup;
+			children = (
+				C91031151E47242D0004DFFE /* Controllers */,
+				C91031191E4724D10004DFFE /* Storyboards */,
+				C91031171E47249E0004DFFE /* Libraries */,
+				C910311C1E4724FE0004DFFE /* Resources */,
+				C91031161E4724660004DFFE /* Application */,
+			);
+			path = "OpenVPN iOS Client";
+			sourceTree = "<group>";
+		};
+		C91031151E47242D0004DFFE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C91031161E4724660004DFFE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C91031051E47237A0004DFFE /* AppDelegate.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		C91031171E47249E0004DFFE /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C910311A1E4724EE0004DFFE /* Base */,
+				C910311B1E4724F20004DFFE /* Helpers */,
+				C91031181E4724A90004DFFE /* Configuration */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		C91031181E4724A90004DFFE /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C9990B361E62F0E800474227 /* OpenVPN iOS Client.entitlements */,
+				C91031111E47237A0004DFFE /* Info.plist */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		C91031191E4724D10004DFFE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C91031091E47237A0004DFFE /* Main.storyboard */,
+				C910310E1E47237A0004DFFE /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C910311A1E4724EE0004DFFE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		C910311B1E4724F20004DFFE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		C910311C1E4724FE0004DFFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C910310C1E47237A0004DFFE /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C91031231E4727E20004DFFE /* OpenVPN iOS Tunnel Provider */ = {
+			isa = PBXGroup;
+			children = (
+				C91031301E4728F10004DFFE /* Libraries */,
+				C91031321E4729120004DFFE /* Provider */,
+			);
+			path = "OpenVPN iOS Tunnel Provider";
+			sourceTree = "<group>";
+		};
+		C91031301E4728F10004DFFE /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C91031341E4729270004DFFE /* Helpers */,
+				C91031311E4728F70004DFFE /* Configuration */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		C91031311E4728F70004DFFE /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C91031281E4727E20004DFFE /* Info.plist */,
+				C91031251E4727E20004DFFE /* OpenVPN iOS Tunnel Provider.entitlements */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		C91031321E4729120004DFFE /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				C91031261E4727E20004DFFE /* PacketTunnelProvider.swift */,
+			);
+			name = Provider;
+			sourceTree = "<group>";
+		};
+		C91031341E4729270004DFFE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C928AD711E6E94FE00DA04BD /* Extensions */,
+				C92638FD1E71BF7D00B3D77A /* Utils */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		C91031361E472C870004DFFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C912BB261E7C391F002B9414 /* OpenVPNAdapter.framework */,
+				C912BB221E7C329B002B9414 /* NetworkExtension.framework */,
+				C91031371E472C870004DFFE /* KeychainAccess.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C92638FD1E71BF7D00B3D77A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C92638FE1E71BF9C00B3D77A /* Then.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		C928AD711E6E94FE00DA04BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C928AD721E6E952F00DA04BD /* KeychainAccess+Reference.swift */,
+				C92638FB1E71B4B500B3D77A /* NEPacketTunnelFlow+OpenVPN.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C91031011E47237A0004DFFE /* OpenVPN iOS Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C91031141E47237A0004DFFE /* Build configuration list for PBXNativeTarget "OpenVPN iOS Client" */;
+			buildPhases = (
+				C910311D1E4725740004DFFE /* Check Warning And Error Tags */,
+				C91030FE1E47237A0004DFFE /* Sources */,
+				C910313B1E472CD70004DFFE /* Copy Carthage Dependencies */,
+				C91030FF1E47237A0004DFFE /* Frameworks */,
+				C91031001E47237A0004DFFE /* Resources */,
+				C910312F1E4727E20004DFFE /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C910312A1E4727E20004DFFE /* PBXTargetDependency */,
+			);
+			name = "OpenVPN iOS Client";
+			productName = "OpenVPN Client";
+			productReference = C91031021E47237A0004DFFE /* OpenVPN iOS Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C91031211E4727E20004DFFE /* OpenVPN iOS Tunnel Provider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C910312C1E4727E20004DFFE /* Build configuration list for PBXNativeTarget "OpenVPN iOS Tunnel Provider" */;
+			buildPhases = (
+				C910313D1E472E170004DFFE /* Check Warning And Error Tags */,
+				C910311E1E4727E20004DFFE /* Sources */,
+				C910313C1E472D1B0004DFFE /* Copy Carthage Dependencies */,
+				C910311F1E4727E20004DFFE /* Frameworks */,
+				C91031201E4727E20004DFFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OpenVPN iOS Tunnel Provider";
+			productName = "OpenVPN Tunnel Provider";
+			productReference = C91031221E4727E20004DFFE /* OpenVPN iOS Tunnel Provider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C91030F81E471D760004DFFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					C91031011E47237A0004DFFE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2TWXCGG7R3;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					C91031211E4727E20004DFFE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2TWXCGG7R3;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C91030FB1E471D760004DFFE /* Build configuration list for PBXProject "OpenVPN iOS Client" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C91030F71E471D760004DFFE;
+			productRefGroup = C91031031E47237A0004DFFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C91031011E47237A0004DFFE /* OpenVPN iOS Client */,
+				C91031211E4727E20004DFFE /* OpenVPN iOS Tunnel Provider */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C91031001E47237A0004DFFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C91031101E47237A0004DFFE /* LaunchScreen.storyboard in Resources */,
+				C910310D1E47237A0004DFFE /* Assets.xcassets in Resources */,
+				C910310B1E47237A0004DFFE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C91031201E4727E20004DFFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C910311D1E4725740004DFFE /* Check Warning And Error Tags */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Warning And Error Tags";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:|\\?\\?\\?|\\!\\!\\!\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}/${TARGET_NAME}\" \\( -name \"*.h\" -or -name \"*.mm\" -or -name \"*.m\" -or -name \"*.swift\" \\) ! -path \"*/Vendors/*\" -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
+		};
+		C910313B1E472CD70004DFFE /* Copy Carthage Dependencies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Carthage Dependencies";
+			outputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks";
+		};
+		C910313C1E472D1B0004DFFE /* Copy Carthage Dependencies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OpenVPNAdapter.framework",
+			);
+			name = "Copy Carthage Dependencies";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks";
+		};
+		C910313D1E472E170004DFFE /* Check Warning And Error Tags */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Warning And Error Tags";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:|\\?\\?\\?|\\!\\!\\!\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}/${TARGET_NAME}\" \\( -name \"*.h\" -or -name \"*.mm\" -or -name \"*.m\" -or -name \"*.swift\" \\) ! -path \"*/Vendors/*\" -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C91030FE1E47237A0004DFFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C91031061E47237A0004DFFE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C910311E1E4727E20004DFFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C92638FF1E71BF9C00B3D77A /* Then.swift in Sources */,
+				C92638FC1E71B4B500B3D77A /* NEPacketTunnelFlow+OpenVPN.swift in Sources */,
+				C91031271E4727E20004DFFE /* PacketTunnelProvider.swift in Sources */,
+				C928AD731E6E952F00DA04BD /* KeychainAccess+Reference.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C910312A1E4727E20004DFFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C91031211E4727E20004DFFE /* OpenVPN iOS Tunnel Provider */;
+			targetProxy = C91031291E4727E20004DFFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C91031091E47237A0004DFFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C910310A1E47237A0004DFFE /* Base */,
+			);
+			name = Main.storyboard;
+			path = "OpenVPN iOS Client";
+			sourceTree = "<group>";
+		};
+		C910310E1E47237A0004DFFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C910310F1E47237A0004DFFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = "OpenVPN iOS Client";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C91030FC1E471D760004DFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		C91030FD1E471D760004DFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		C91031121E47237A0004DFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "OpenVPN iOS Client/OpenVPN iOS Client.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2TWXCGG7R3;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/OpenVPN iOS Client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.ss-abramchuk.openvpn-ios-client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "65d9b784-150e-4ccb-a551-8b59e2a558db";
+				PROVISIONING_PROFILE_SPECIFIER = "OpenVPN iOS Client Dev Profile";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C91031131E47237A0004DFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "OpenVPN iOS Client/OpenVPN iOS Client.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/OpenVPN iOS Client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.ss-abramchuk.openvpn-ios-client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C910312D1E4727E20004DFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "OpenVPN iOS Tunnel Provider/OpenVPN iOS Tunnel Provider.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2TWXCGG7R3;
+				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/Carthage/Build/iOS\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/OpenVPN iOS Tunnel Provider/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.ss-abramchuk.openvpn-ios-client.tunnel-provider";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3b8150a9-e826-4354-a88b-cf6ac7093f1d";
+				PROVISIONING_PROFILE_SPECIFIER = "OpenVPN iOS Tunnel Provider Dev Profile";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C910312E1E4727E20004DFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "OpenVPN iOS Tunnel Provider/OpenVPN iOS Tunnel Provider.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/Carthage/Build/iOS\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/OpenVPN iOS Tunnel Provider/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.ss-abramchuk.openvpn-ios-client.tunnel-provider";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C91030FB1E471D760004DFFE /* Build configuration list for PBXProject "OpenVPN iOS Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C91030FC1E471D760004DFFE /* Debug */,
+				C91030FD1E471D760004DFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C91031141E47237A0004DFFE /* Build configuration list for PBXNativeTarget "OpenVPN iOS Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C91031121E47237A0004DFFE /* Debug */,
+				C91031131E47237A0004DFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C910312C1E4727E20004DFFE /* Build configuration list for PBXNativeTarget "OpenVPN iOS Tunnel Provider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C910312D1E4727E20004DFFE /* Debug */,
+				C910312E1E4727E20004DFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C91030F81E471D760004DFFE /* Project object */;
+}

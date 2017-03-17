@@ -1,0 +1,2 @@
+[submodule "Carthage/Checkouts/openvpn-adapter"]
+	url = https://github.com/ss-abramchuk/openvpn-adapter.git
